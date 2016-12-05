@@ -20,3 +20,18 @@ def gos(stones):
             return 'First'
         else:
             return 'Second'
+
+
+Kevin so far: 
+def gameofstones(a):
+    answer = []
+    i=0
+    for x in a: 
+        if (x % 7 >=2) and (x % 7 <= 6):
+            answer[i]='First'
+            i=i+1
+        else: 
+            answer[i]='Second'
+            i=i+1
+     
+    print(answer)
