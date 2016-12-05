@@ -23,15 +23,20 @@ def gos(stones):
 
 
 Kevin so far: 
-def gameofstones(a):
-    answer = []
+a = input()
+b=list(map(int,a.split()))
+def gameofstones(b):
+    answer=[]
     i=0
-    for x in a: 
+    for x in b:
         if (x % 7 >=2) and (x % 7 <= 6):
-            answer[i]='First'
+            answer.append('First')
             i=i+1
         else: 
-            answer[i]='Second'
+            answer.append('Second')
             i=i+1
-     
     print(answer)
+
+gameofstones(b)
+print(a)
+print(b)
