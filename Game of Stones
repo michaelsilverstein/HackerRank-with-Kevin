@@ -1,0 +1,22 @@
+##https://www.hackerrank.com/challenges/game-of-stones-1
+
+#Michael so far:
+def gos(stones):
+    for game in stones:
+        if game <= 1:
+            return 'Second'
+        turn = 0
+        while game > 1:
+            if game % 5 == 0:
+                game -= 5
+                turn += 1
+            if game % 3 == 0:
+                game -= 3
+                turn += 1
+            if game % 2 == 0:
+                game -= 2
+                turn += 1
+        if turn % 2 == 0:
+            return 'First'
+        else:
+            return 'Second'
