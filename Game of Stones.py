@@ -22,7 +22,7 @@ def gos(stones):
             return 'Second'
 
 
-Kevin (works):
+#Kevin (works):
 a = input()
 n = int(a)
 c = [input() for _ in range(n)]
