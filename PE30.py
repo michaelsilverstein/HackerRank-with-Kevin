@@ -14,6 +14,18 @@ def sum_fifth(num):
 def check(num):
     if num == sum_fifth(num):
         return True
+def find_constraint():
+    #Finds constraint: when does output 'outcompete' input
+    nines = ''
+    n9 = range(1,101)
+    sums = []
+    for x in range(100):
+        nines += '9'
+        n = int(nines)
+        s = sum_fifth(n)
+        sums.append(s)
+        print nines,s,len(nines),len(str(s))
+    #===> At 10e6
 s = 0
 for x in range(2,int(10e6)):
     if check(x):
