@@ -3,6 +3,8 @@
 
 Brute Force:
 
+#Problem 30
+
 from time import *
 
 start = clock()
@@ -15,7 +17,7 @@ def check(num):
     if num == sum_fifth(num):
         return True
 def find_constraint():
-    #Finds constraint: when does output 'outcompete' input
+    ##Find constraint
     nines = ''
     n9 = range(1,101)
     sums = []
@@ -25,15 +27,16 @@ def find_constraint():
         s = sum_fifth(n)
         sums.append(s)
         print nines,s,len(nines),len(str(s))
-    #===> At 10e6
-s = 0
-for x in range(2,int(10e6)):
-    if check(x):
-        s += x
-        print x
-print 'Total:',s
+def main():
+    s = 0
+    for x in range(2,int(10e5)):
+        if check(x):
+            s += x
+            print x
+    print 'Total:',s
+main()
 
-print 'Time required: %f seconds'%(clock()-start)
+print 'Time required: %f seconds'%(clock()-start)   
 --------------------------------------------------
 Output:
 4150
@@ -43,4 +46,4 @@ Output:
 93084
 194979
 Total: 443839
-Time required: 56.114640 seconds
+Time required: 4.798988 seconds
