@@ -8,7 +8,7 @@ from time import *
 start = clock()
 
 def sum_fifth(num):
-    #Sums each digit to the fourth power of a number
+    #Sums each digit to the fifth power of a number
     return int(sum([int(x)**5 for x in str(num)]))
 
 def check(num):
